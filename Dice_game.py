@@ -1,29 +1,30 @@
 from random import randint
-
+import time
 # importing random module to provide random action
+#Time module to get some time to roll the dice
 
-print("Do you want to improve the chances of getting more 6 \n")
-selection = str(input(print("Enter Y for yes and N for No\n")))
+selection = input(print("Do you want to improve the chances of getting more 6? \n(Y/N)"))
+
 if selection == 'Y' or 'y':
     # Applying condition for getting more 6 on dice
-    while True:
-        next = input(print("play again enter Y"))
-        if next == 'Y' or 'y':
-            num = randint(3, 6)
-            print(num)
-            # it will give you number in between 4 to 6
-        else:
-            break
-
+    roll_dice = "Yes"
+    while roll_dice == "Yes" or roll_dice =='Y' or roll_dice =='y':
+        print('getting number')
+        time.sleep(1)
+        num = randint(3, 6)
+        print(num)
+    # it will give you number in between 4 to 6
+        roll_dice = input('Do you want to play again? (Y/N)')
 
 else:
-    # normal Dice 1 to 6
-    while True:
-        next = input(print("play again enter Y"))
-        if next == 'Y' or 'y':
-            Dice_number = randint(1, 6)
-            # it will give you number in between 1 to 6
-            print(Dice_number)
-        else:
-            break
-    print()
+# normal Dice 1 to 6
+    roll_dice = "Yes"
+    while roll_dice == "Yes" or roll_dice =='Y' or roll_dice =='y':
+        print('getting number')
+        time.sleep(1)
+        Dice_number = randint(1, 6)
+        # it will give you number in between 1 to 6
+        print(Dice_number)
+        roll_dice = input('Do you want to play again? (Y/N)')
+
+print()
