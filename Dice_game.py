@@ -14,6 +14,16 @@ if selection == 'Y' or selection == 'y':
         time.sleep(1)
         num = randint(3, 6)
         print(num)
+        if num == 6:
+            replay = input(print('Play again press Enter'))
+            time.sleep(1)
+            replay_num = randint(1, 6)
+            print(replay_num)
+            while replay_num == 6:
+                replay = input(print('Play again press Enter'))
+                time.sleep(1)
+                replay_num = randint(1, 6)
+                print(replay_num)
         # it will give you number in between 3 to 6
         roll_dice = input('Do you want to play again? (Y/N)')
 
@@ -26,6 +36,16 @@ else:
         Dice_number = randint(1, 6)
         # it will give you number in between 1 to 6
         print(Dice_number)
+        if Dice_number == 6:
+            replay = input(print('Play again press Enter'))
+            time.sleep(1)
+            replay_num = randint(1, 6)
+            print(replay_num)
+            while replay_num == 6:
+                replay = input(print('Play again press Enter'))
+                time.sleep(1)
+                replay_num= randint(1, 6)
+                print(replay_num)
         roll_dice = input('Do you want to play again? (Y/N)')
 
 print()
